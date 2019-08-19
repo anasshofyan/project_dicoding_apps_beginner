@@ -1,6 +1,7 @@
 package com.google.hasan;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,7 @@ public class list_adaptor extends BaseAdapter {
     private final String[] isi_nama;
     private final String[] isi_diskripsi;
     private Context context;
+
 
     public list_adaptor(Context context, int[] isi_gambar, String[] isi_nama, String[] isi_diskripsi) {
         this.context=context;
@@ -45,8 +47,8 @@ public class list_adaptor extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.activity_list_adaptor,null,true);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.listView_image);
-        TextView namaView = (TextView) rowView.findViewById(R.id.listView_nama);
-        TextView diskripsi = (TextView) rowView.findViewById(R.id.listView_diskripsi);
+        TextView namaView = (TextView) rowView.findViewById(R.id.textNama);
+        TextView diskripsi = (TextView) rowView.findViewById(R.id.textDiskripsi);
         imageView.setImageResource(isi_gambar[i]);
         namaView.setText(isi_nama[i]);
         diskripsi.setText(isi_diskripsi[i]);
