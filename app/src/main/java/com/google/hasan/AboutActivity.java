@@ -1,8 +1,10 @@
 package com.google.hasan;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class AboutActivity extends AppCompatActivity {
@@ -30,5 +32,9 @@ public class AboutActivity extends AppCompatActivity {
         userTitle.setTypeface(MMedium);
         emailTitle.setTypeface(MLight);
 
+    }
+
+    public void btn_cancel(View view) {
+        startActivity(new Intent(AboutActivity.this, MainActivity.class));
     }
 }
