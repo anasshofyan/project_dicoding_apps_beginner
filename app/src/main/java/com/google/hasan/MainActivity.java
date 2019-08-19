@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     int[] isi_gambar = {R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user,R.drawable.ic_user};
 
-    String [] isi_nama = {"Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas"};
+    String [] isi_nama = {"Almas","Anas","Fanus","Sofyan","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas"};
 
     String [] isi_Diskripsi = {"Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas","Almas"};
 
@@ -40,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
                 Bundle b = new Bundle();
                 intent.putExtra("key", i); //Your id
+                intent.putExtra("gambar",isi_gambar[i]);
                 intent.putExtra("data",isi_nama[i]);
+                intent.putExtra("diskripsi",isi_Diskripsi[i]);
                 startActivity(intent);
             }
         });
