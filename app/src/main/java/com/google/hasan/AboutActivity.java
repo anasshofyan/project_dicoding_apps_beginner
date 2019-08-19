@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class AboutActivity extends AppCompatActivity {
-    TextView titlePage, subTitle;
+    TextView titlePage, subTitle, userTitle, emailTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +16,8 @@ public class AboutActivity extends AppCompatActivity {
         //font element
         titlePage = findViewById(R.id.titlePage);
         subTitle = findViewById(R.id.subTitle);
+        userTitle = findViewById(R.id.userTitle);
+        emailTitle = findViewById(R.id.emailTitle);
 
         //import font
         Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/MLight.ttf");
@@ -24,5 +27,8 @@ public class AboutActivity extends AppCompatActivity {
         //set font
         titlePage.setTypeface(MRegular);
         subTitle.setTypeface(MLight);
+        userTitle.setTypeface(MMedium);
+        emailTitle.setTypeface(MLight);
+
     }
 }
